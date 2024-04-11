@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    <style>
+        .Navbar{
+            display: flex;
+            margin-top: 4vh;
+            padding-left: 1vw;
+        }
+        .Navbar_link{
+            padding-left: 2vw;
+        }
+        .Navbar_toggle{
+            display: none;
+            
+        }
+
+        @media (max-width: 768px) {
+            .Navbar{
+                flex-direction: column;
+            }
+            .Navbar_link{
+                display: none;
+            }
+
+            .Navbar_toggle{
+                display: initial;
+                align-self: end;
+                position: absolute;
+                cursor: pointer;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="Navbar">
+        <div class="Navbar_link-brand">
+            <a href="">Website title</a>
+        </div>
+        <nav class="Navbar_items">
+            <div class="Navbar_link">
+                <a href="">Link</a>
+                
+            </div>
+            <div class="Navbar_link">
+                <a href="">Link</a>
+                
+            </div>
+            <div class="Navbar_link">
+                <a href="">Link</a>
+                
+            </div>
+            <div class="Navbar_link">
+                <a href="">Link</a>
+                
+            </div>
+            <div class="Navbar_link">
+                <a href="">Link</a>
+                
+            </div>
+        </nav>
+        
+        <div class="Navbar_toggle">
+            <a href="">toggle</a>
+            
+        </div>
+        
+    </div>
+
+
+    <script>
+        function navtoggle() {
+           const navlink = document.querySelectorAll('.Navbar_link')
+           navlink.forEach(nav =>  nav.classList.toggle('Navbar_ToggleShow'));
+           document.querySelector('.Navbar_toggle').addEventListener('click',classToggle);
+
+        }
+        
+    </script>
+</body>
+</html>
